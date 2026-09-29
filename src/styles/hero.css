@@ -1,0 +1,377 @@
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+  position: relative;
+
+  overflow: hidden;
+
+  padding-block:
+    var(--space-12)
+    var(--space-16);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--surface-green) 0%,
+      var(--background) 55%,
+      var(--surface-blue) 100%
+    );
+}
+
+
+/* =========================================
+   HERO GRID
+========================================= */
+
+.hero__grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: var(--space-12);
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero__content {
+  position: relative;
+  z-index: var(--z-base);
+
+  max-width: 650px;
+}
+
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  margin-bottom: var(--space-4);
+
+  padding:
+    var(--space-2)
+    var(--space-3);
+
+  border:
+    1px solid
+    rgba(42, 115, 78, 0.15);
+
+  border-radius: var(--radius-full);
+
+  background:
+    rgba(255, 255, 255, 0.75);
+
+  color: var(--primary-green);
+
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+
+  letter-spacing: 0.04em;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.hero__title {
+  max-width: 680px;
+
+  margin-bottom: var(--space-5);
+
+  color: var(--text-dark);
+
+  font-size: clamp(
+    2.5rem,
+    5vw,
+    4.25rem
+  );
+
+  font-weight: var(--weight-bold);
+
+  line-height: 1.08;
+
+  letter-spacing: -0.035em;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.hero__description {
+  max-width: 600px;
+
+  margin-bottom: var(--space-5);
+
+  color: var(--text-secondary);
+
+  font-size: var(--text-lg);
+
+  line-height: var(--line-relaxed);
+}
+
+
+/* =========================================
+   LOCATION
+========================================= */
+
+.hero__location {
+  display: inline-flex;
+  align-items: center;
+
+  gap: var(--space-2);
+
+  margin-bottom: var(--space-8);
+
+  color: var(--text-secondary);
+
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+}
+
+.hero__location svg {
+  flex-shrink: 0;
+
+  color: var(--primary-green);
+}
+
+
+/* =========================================
+   HERO ACTIONS
+========================================= */
+
+.hero__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: var(--space-3);
+}
+
+
+/* =========================================
+   HERO VISUAL
+========================================= */
+
+.hero__visual {
+  position: relative;
+
+  min-height: 520px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================
+   HERO IMAGE
+========================================= */
+
+.hero__image-wrapper {
+  position: relative;
+  z-index: 2;
+
+  width: min(100%, 570px);
+
+  aspect-ratio: 4 / 4.6;
+
+  overflow: hidden;
+
+  border:
+    8px solid
+    rgba(255, 255, 255, 0.75);
+
+  border-radius:
+    var(--radius-2xl)
+    var(--radius-2xl)
+    80px
+    var(--radius-2xl);
+
+  background: var(--white);
+
+  box-shadow: var(--shadow-lg);
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+/* =========================================
+   DECORATIVE SHAPES
+========================================= */
+
+.hero__decor {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.hero__decor--one {
+  width: 190px;
+  height: 190px;
+
+  right: -20px;
+  top: 10px;
+
+  background:
+    rgba(128, 165, 158, 0.22);
+}
+
+.hero__decor--two {
+  width: 250px;
+  height: 250px;
+
+  bottom: -30px;
+  left: -30px;
+
+  background:
+    rgba(47, 111, 159, 0.10);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1023px) {
+  .hero {
+    padding-block:
+      var(--space-10)
+      var(--space-12);
+  }
+
+  .hero__grid {
+    gap: var(--space-8);
+  }
+
+  .hero__title {
+    font-size: clamp(
+      2.4rem,
+      6vw,
+      3.5rem
+    );
+  }
+
+  .hero__visual {
+    min-height: 440px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+  .hero {
+    padding-block:
+      var(--space-8)
+      var(--space-12);
+  }
+
+  .hero__grid {
+    grid-template-columns: 1fr;
+
+    gap: var(--space-8);
+  }
+
+  .hero__content {
+    max-width: none;
+  }
+
+  .hero__eyebrow {
+    margin-bottom: var(--space-3);
+
+    font-size: 0.7rem;
+  }
+
+  .hero__title {
+    margin-bottom: var(--space-4);
+
+    font-size: clamp(
+      2.25rem,
+      10vw,
+      3rem
+    );
+
+    letter-spacing: -0.025em;
+  }
+
+  .hero__description {
+    margin-bottom: var(--space-4);
+
+    font-size: var(--text-base);
+  }
+
+  .hero__location {
+    margin-bottom: var(--space-6);
+  }
+
+  .hero__actions {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    width: 100%;
+  }
+
+  .hero__actions .button {
+    width: 100%;
+  }
+
+  .hero__visual {
+    min-height: auto;
+
+    padding-inline: var(--space-3);
+  }
+
+  .hero__image-wrapper {
+    width: 100%;
+
+    max-width: 520px;
+
+    margin-inline: auto;
+
+    border-radius:
+      var(--radius-xl)
+      var(--radius-xl)
+      50px
+      var(--radius-xl);
+  }
+
+  .hero__decor--one {
+    width: 110px;
+    height: 110px;
+
+    right: -15px;
+    top: 5px;
+  }
+
+  .hero__decor--two {
+    width: 150px;
+    height: 150px;
+
+    left: -20px;
+    bottom: -15px;
+  }
+}

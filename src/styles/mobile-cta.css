@@ -1,0 +1,116 @@
+/* =========================================
+   MOBILE STICKY CTA
+========================================= */
+
+.mobile-cta {
+  display: none;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+  .mobile-cta {
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: var(--z-sticky);
+
+    display: block;
+
+    padding:
+      var(--space-2)
+      var(--container-padding-mobile);
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border-top: 1px solid var(--border-light);
+
+    box-shadow:
+      0 -8px 24px rgba(23, 60, 44, 0.08);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    /*
+      Safe-area support for phones with
+      bottom navigation / home indicators.
+    */
+    padding-bottom:
+      calc(
+        var(--space-2) +
+        env(safe-area-inset-bottom)
+      );
+  }
+
+  .mobile-cta__inner {
+    display: grid;
+
+    grid-template-columns:
+      minmax(0, 0.8fr)
+      minmax(0, 1.2fr);
+
+    gap: var(--space-2);
+
+    max-width: 600px;
+
+    margin-inline: auto;
+  }
+
+  .mobile-cta__button {
+    min-height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: var(--space-2);
+
+    padding-inline: var(--space-3);
+
+    border-radius: var(--radius-md);
+
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+
+    text-align: center;
+
+    transition:
+      transform var(--transition-fast),
+      background-color var(--transition-fast);
+  }
+
+  .mobile-cta__button:active {
+    transform: scale(0.98);
+  }
+
+  .mobile-cta__button--call {
+    background: var(--surface-green);
+
+    color: var(--primary-green);
+
+    border: 1px solid var(--border-light);
+  }
+
+  .mobile-cta__button--whatsapp {
+    background: var(--primary-green);
+
+    color: var(--white);
+  }
+}
+
+
+/* =========================================
+   VERY SMALL DEVICES
+========================================= */
+
+@media (max-width: 360px) {
+  .mobile-cta__button {
+    font-size: var(--text-xs);
+  }
+}

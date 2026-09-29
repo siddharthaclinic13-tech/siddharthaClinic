@@ -1,0 +1,16 @@
+{
+  "name": "Siddhartha Super Speciality Dental Hospital",
+  "short_name": "Siddhartha Dental Hospital",
+  "description": "Siddhartha Super Speciality Dental Hospital in Kakinada, Andhra Pradesh.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F7FAF8",
+  "theme_color": "#2A734E",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

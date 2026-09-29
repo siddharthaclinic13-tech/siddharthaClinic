@@ -1,0 +1,80 @@
+/* =========================================
+   TABLET
+========================================= */
+
+@media (min-width: 768px) {
+  .container {
+    padding-inline: var(--container-padding-tablet);
+  }
+
+  .section {
+    padding-block: var(--section-padding-tablet);
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+
+/* =========================================
+   DESKTOP
+========================================= */
+
+@media (min-width: 1024px) {
+  .container {
+    padding-inline: var(--container-padding-desktop);
+  }
+
+  .section {
+    padding-block: var(--section-padding-desktop);
+  }
+
+  h1 {
+    font-size: var(--text-6xl);
+  }
+
+  h2 {
+    font-size: var(--text-4xl);
+  }
+}
+
+
+/* =========================================
+   LARGE DESKTOP
+========================================= */
+
+@media (min-width: 1280px) {
+  .container {
+    padding-inline: 0;
+  }
+}
+/* =========================================
+   COMMON COMPONENT RESPONSIVE STYLES
+========================================= */
+
+@media (max-width: 480px) {
+  .button {
+    width: 100%;
+  }
+
+  .button--small {
+    width: auto;
+  }
+
+  .section-heading {
+    margin-bottom: var(--space-8);
+  }
+
+  .section-heading__title {
+    font-size: 2rem;
+  }
+
+  .section-heading__description {
+    font-size: var(--text-sm);
+  }
+}

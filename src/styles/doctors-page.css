@@ -1,0 +1,239 @@
+.doctors-page {
+  background: var(--white);
+}
+
+/* =====================================================
+   HERO
+   ===================================================== */
+
+.doctors-page__hero {
+  padding: var(--space-8) 0 var(--space-16);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--background),
+      var(--light-blue)
+    );
+}
+
+.doctors-page__hero-content {
+  max-width: 820px;
+
+  padding-top: var(--space-14);
+}
+
+.doctors-page__eyebrow {
+  display: inline-block;
+
+  margin-bottom: var(--space-3);
+
+  color: var(--primary-blue);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.doctors-page__title {
+  margin: 0 0 var(--space-5);
+
+  color: var(--text-dark);
+
+  font-size: var(--font-size-5xl);
+  line-height: 1.08;
+}
+
+.doctors-page__description {
+  max-width: 700px;
+
+  margin: 0;
+
+  color: var(--text-muted);
+
+  font-size: var(--font-size-lg);
+  line-height: 1.75;
+}
+
+/* =====================================================
+   DOCTORS GRID
+   ===================================================== */
+
+.doctors-page__grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+
+  gap: var(--space-7);
+}
+
+/*
+ * DoctorCard already owns its internal styling.
+ * This page only controls the layout.
+ */
+
+.doctors-page__grid .doctor-card {
+  height: 100%;
+  padding: var(--space-3);
+  margin: var(--space-2);
+}
+
+/* =====================================================
+   EMPTY STATE
+   ===================================================== */
+
+.doctors-page__empty {
+  padding: var(--space-16);
+
+  text-align: center;
+
+  border: 1px dashed var(--border-color);
+
+  border-radius: var(--radius-xl);
+
+  background: var(--background);
+}
+
+.doctors-page__empty p {
+  margin: 0;
+
+  color: var(--text-muted);
+}
+
+/* =====================================================
+   CTA
+   ===================================================== */
+
+.doctors-page__cta {
+  padding: var(--space-14) 0;
+  gap: var(--space-6);
+  background:
+    linear-gradient(
+      135deg,
+      var(--primary-green),
+      var(--primary-blue)
+    );
+}
+
+.doctors-page__cta-inner {
+  display: flex;
+  
+  align-items: center;
+
+  gap: var(--space-6);
+}
+
+.doctors-page__cta-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 64px;
+  height: 64px;
+
+  border-radius: 50%;
+
+  color: var(--primary-green);
+
+  background: var(--white);
+}
+
+.doctors-page__cta-content {
+  flex: 1;
+}
+
+.doctors-page__cta-content span {
+  display: block;
+
+  margin-bottom: var(--space-2);
+
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.doctors-page__cta-content h2 {
+  margin: 0 0 var(--space-2);
+
+  color: var(--white);
+
+  font-size: var(--font-size-2xl);
+  line-height: 1.2;
+}
+
+.doctors-page__cta-content p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+}
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 1023px) {
+
+  .doctors-page__title {
+    font-size: var(--font-size-4xl);
+  }
+
+  .doctors-page__grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: var(--space-2);
+    gap: var(--space-6);
+  }
+}
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 767px) {
+
+  .doctors-page__hero {
+    padding-bottom: var(--space-12);
+  }
+
+  .doctors-page__hero-content {
+    padding-top: var(--space-10);
+  }
+
+  .doctors-page__title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .doctors-page__description {
+    font-size: var(--font-size-base);
+  }
+
+  .doctors-page__grid {
+    grid-template-columns: 1fr;
+    margin: var(--space-6);
+    padding: var(--space-6);
+    gap: var(--space-5);
+  }
+
+  .doctors-page__cta-inner {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .doctors-page__cta-content h2 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .doctors-page__cta-inner .button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,61 @@
+.quote-scroller {
+  position: relative;
+  z-index: 100;
+
+  overflow: hidden;
+
+  width: 100%;
+
+  color: var(--white);
+
+  background: var(--primary-green);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.quote-scroller__track {
+  display: flex;
+  width: max-content;
+
+  animation: quote-scroll 30s linear infinite;
+}
+
+.quote-scroller__item {
+  display: inline-flex;
+  align-items: center;
+
+  gap: var(--space-4);
+
+  padding: 10px var(--space-8);
+
+  white-space: nowrap;
+
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.02em;
+}
+
+.quote-scroller__item span {
+  color: var(--teal);
+  font-size: 11px;
+}
+
+@keyframes quote-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.quote-scroller:hover .quote-scroller__track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quote-scroller__track {
+    animation: none;
+  }
+}
